@@ -1,25 +1,23 @@
-import Product from "./Components/Product"
-import Navbar from "./Components/Navbar"
-import {BrowserRouter as Router,
-Routes,Route} from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./Components/Navbar";
+import Products from "./Components/pages/Products";
+import Cart from "./Components/pages/Cart";
 
 
-function App() {
-
-
+const App = ()=> {
   return (
-    <>
     <Router>
       <Navbar />
       <Routes>
-        <Route path='/' element={<Product />}></Route>
-
+        <Route path="/" element={<Products />}>
+          Products
+        </Route>
+        <Route path="/cart" element={<Cart />}></Route>
       </Routes>
-       
     </Router>
-    
-    </>
-  )
+  );
 }
 
-export default App
+export default App;
+
+
